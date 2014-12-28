@@ -34,6 +34,8 @@ Plugin 'git://github.com/ardagnir/vimbed'
 Plugin 'zenorocha/dracula-theme', {'rtp': 'vim/'}
 Plugin 'genoma/vim-less' 
 Plugin 'kchmck/vim-coffee-script'
+Plugin 'godlygeek/tabular'
+Plugin 'plasticboy/vim-markdown'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
