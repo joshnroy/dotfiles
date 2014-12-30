@@ -51,10 +51,6 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-export PATH="/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"
-export WORKON_HOME=~/Envs
-source /usr/local/bin/virtualenvwrapper.sh
-
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment

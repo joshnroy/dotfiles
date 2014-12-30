@@ -26,7 +26,6 @@ Plugin 'git://github.com/digitaltoad/vim-jade.git'
 "Jade Syntax Highlighting
 Plugin 'itchyny/lightline.vim'
 "Lightline
-Plugin 'git://github.com/tpope/surround.vim'
 Plugin 'git://github.com/skammer/vim-css-color.git'
 "CSS Color
 Plugin 'git://github.com/ardagnir/vimbed'
@@ -36,6 +35,9 @@ Plugin 'genoma/vim-less'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'marijnh/tern_for_vim'
+Plugin 'scrooloose/syntastic'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -75,3 +77,12 @@ set nowrap
 set clipboard=unnamed
 set mouse=a
 
+" Remappings
+inoremap { {<CR><BS>}<Esc>ko
+" Better Brackets
+inoremap ( ()<Esc>i
+" Better Parenthesis
+inoremap " ""<Esc>i
+" Better Double Quotes
+inoremap ' ''<Esc>i
+" Better Single Quotes
