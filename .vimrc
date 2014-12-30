@@ -78,7 +78,7 @@ set clipboard=unnamed
 set mouse=a
 
 " Remappings
-inoremap { {<CR><BS>}<Esc>ko
+inoremap { {}<Esc>i
 " Better Brackets
 inoremap ( ()<Esc>i
 " Better Parenthesis
@@ -86,3 +86,6 @@ inoremap " ""<Esc>i
 " Better Double Quotes
 inoremap ' ''<Esc>i
 " Better Single Quotes
+
+imap <NUL> <Esc>
+" Binds Control-Space to Escape 
