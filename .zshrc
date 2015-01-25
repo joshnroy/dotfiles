@@ -84,3 +84,8 @@ export PATH="/usr/local/heroku/bin:$PATH"
 # Added by Josh for tmux 10.12.14
 export EDITOR='vim'
 export SHELL='zsh'
+
+# Support for 256 color xterm
+if [ -n "$DISPLAY" -a "$TERM" '==' "xterm" ]; then
+    export TERM='xterm-256color'
+fi
