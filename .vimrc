@@ -20,12 +20,8 @@ Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 " Avoid a name conflict with L9
 Plugin 'git://github.com/altercation/vim-colors-solarized.git'
 "Solarized Colors
-Plugin 'git://github.com/scrooloose/nerdtree.git'
-"NerdTree
 Plugin 'git://github.com/digitaltoad/vim-jade.git'
 "Jade Syntax Highlighting
-Plugin 'itchyny/lightline.vim'
-"Lightline
 Plugin 'git://github.com/skammer/vim-css-color.git'
 "CSS Color
 Plugin 'git://github.com/ardagnir/vimbed'
@@ -38,6 +34,8 @@ Plugin 'plasticboy/vim-markdown'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'marijnh/tern_for_vim'
 Plugin 'scrooloose/syntastic'
+Plugin 'bling/vim-airline'
+Plugin 'szw/vim-ctrlspace' 
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -70,12 +68,22 @@ set noerrorbells
 set novisualbell
 syntax on
 set foldenable
-
 set nowrap
-
-" Edits by Josh 11.2.14
 set clipboard=unnamed
 set mouse=a
+set hidden
+set showtabline=0
+
+
+" Compatibility with crtl-space and airline
+let g:airline_exclude_preview = 1
+
+" Workaround to make YouCompleteMe Work with Python 1.20.15
+let g:ycm_path_to_python_interpreter = "/usr/bin/python"
+
+" Enable airline to always show up
+set laststatus=2
+set ttimeoutlen=50
 
 " Remappings
 inoremap { {}<Esc>i
@@ -86,6 +94,3 @@ inoremap " ""<Esc>i
 " Better Double Quotes
 inoremap ' ''<Esc>i
 " Better Single Quotes
-
-imap <NUL> <Esc>
-" Binds Control-Space to Escape 
