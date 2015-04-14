@@ -1,4 +1,3 @@
-set nocompatible              " be iMproved, required
 filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
@@ -36,6 +35,10 @@ Plugin 'marijnh/tern_for_vim'
 Plugin 'scrooloose/syntastic'
 Plugin 'bling/vim-airline'
 Plugin 'szw/vim-ctrlspace' 
+Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'Keithbsmiley/tmux.vim'
+Plugin 'tpope/vim-surround'
+Plugin 'edkolev/tmuxline.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -53,8 +56,8 @@ filetype plugin indent on    " required
 " Put your non-Plugin stuff after this line
 "
 " Prevously existing settings
-set tabstop=4
-set shiftwidth=4
+set tabstop=2
+set shiftwidth=2
 set expandtab
 set smarttab
 set smartindent
@@ -69,7 +72,7 @@ set novisualbell
 syntax on
 set foldenable
 set nowrap
-set clipboard=unnamed
+set clipboard=unnamedplus
 set mouse=a
 set hidden
 set showtabline=0
@@ -94,3 +97,6 @@ inoremap " ""<Esc>i
 " Better Double Quotes
 inoremap ' ''<Esc>i
 " Better Single Quotes
+" Airline-theme
+let g:airline_theme = 'luna'
+"
