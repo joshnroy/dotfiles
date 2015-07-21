@@ -1,0 +1,27 @@
+;; -*- emacs-lisp -*- <15/07/21 16:41:51 /Users/jroy/.emacs.d/tramp>
+;; Tramp connection history.  Don't change this file.
+;; You can delete it, forcing Tramp to reapply the checks.
+
+((["ssh" "pi" "10.55.34.111" nil nil]
+  ("locale" "LC_ALL=C")
+  ("uname" "Linux 3.18.7-v7+")
+  ("test" "test")
+  ("remote-path"
+   ("/bin" "/usr/bin" "/sbin" "/usr/sbin" "/usr/local/bin" "/usr/local/sbin"))
+  ("remote-shell" "/bin/sh")
+  ("perl-file-spec" t)
+  ("perl-cwd-realpath" t)
+  ("perl" "\\perl")
+  ("ls" "/bin/ls --color=never")
+  ("ls-dired" t)
+  ("stat" "\\stat")
+  ("file-exists" "test -e")
+  ("id" "/usr/bin/id")
+  ("gid-integer" 1000)
+  ("readlink" "\\readlink")
+  ("gid-string" "pi")
+  ("uid-integer" 1000)
+  ("tmpdir" "/ssh:pi@10.55.34.111:/tmp")
+  ("touch-t" t)
+  ("touch" "\\touch")
+  ("~" "/home/pi")))
