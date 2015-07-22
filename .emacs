@@ -22,3 +22,4 @@
 (sml/setup)
 (add-hook 'prog-mode-hook 'paredit-everywhere-mode)
 (add-hook 'after-init-hook 'electric-pair-mode)
+(add-hook 'after-init-hook #'global-flycheck-mode)
