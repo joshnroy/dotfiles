@@ -32,7 +32,7 @@
 (define-key isearch-mode-map [escape] 'isearch-abort)   ;; isearch
 (define-key isearch-mode-map "\e" 'isearch-abort)   ;; \e seems to work better for terminals
 (global-set-key [escape] 'keyboard-escape-quit)         ;; everywhere else
-require 'ido)
+(require 'ido)
 (require 'ido-vertical-mode)
 (ido-mode 1)
 (ido-vertical-mode 1)
@@ -45,6 +45,8 @@ require 'ido)
 (setq evil-move-cursor-back nil)
 (unless (display-graphic-p)
   (require 'evil-terminal-cursor-changer))
+(setq evil-normal-state-modes (append evil-emacs-state-modes evil-normal-state-modes))
+(setq evil-emacs-state-modes nil)
 (require 'powerline)
 (require 'powerline-evil)
 (powerline-evil-center-color-theme)
