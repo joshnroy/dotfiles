@@ -1,7 +1,7 @@
-/ssh:pi@10.55.34.111:/home/pi/workspace/laserFeedback/modes/dental
-#_assh_bpi@10.55.34.111_b_ahome_api_aworkspace_alaserFeedback_amodes_adental#
 /Users/jroy/dotfiles/.emacs
 /Users/jroy/dotfiles/#.emacs#
+/ssh:pi@10.55.34.111:/home/pi/workspace/laserFeedback/modes/dental
+#_assh_bpi@10.55.34.111_b_ahome_api_aworkspace_alaserFeedback_amodes_adental#
 /ssh:pi@10.55.34.111:/home/pi/workspace/laserFeedback/oldPrograms/color_checker.c
 #_assh_bpi@10.55.34.111_b_ahome_api_aworkspace_alaserFeedback_aoldPrograms_acolor__checker.c#
 /ssh:pi@10.55.34.111:/home/pi/workspace/laserFeedback/audioGenerationWebServer.py

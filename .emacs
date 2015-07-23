@@ -32,7 +32,7 @@
 (define-key isearch-mode-map [escape] 'isearch-abort)   ;; isearch
 (define-key isearch-mode-map "\e" 'isearch-abort)   ;; \e seems to work better for terminals
 (global-set-key [escape] 'keyboard-escape-quit)         ;; everywhere else
-(require 'ido)
+require 'ido)
 (require 'ido-vertical-mode)
 (ido-mode 1)
 (ido-vertical-mode 1)
