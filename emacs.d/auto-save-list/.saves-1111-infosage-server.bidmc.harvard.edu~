@@ -1,8 +1,0 @@
-/ssh:pi@10.55.34.111:/home/pi/workspace/laserFeedback/videoCaptureAndProcessing.py
-#_assh_bpi@10.55.34.111_b_ahome_api_aworkspace_alaserFeedback_avideoCaptureAndProcessing.py#
-/ssh:pi@10.55.34.111:/home/pi/workspace/laserFeedback/modes/basic
-#_assh_bpi@10.55.34.111_b_ahome_api_aworkspace_alaserFeedback_amodes_abasic#
-/ssh:pi@10.55.34.111:/home/pi/workspace/laserFeedback/modes/dental
-#_assh_bpi@10.55.34.111_b_ahome_api_aworkspace_alaserFeedback_amodes_adental#
-/ssh:pi@10.55.34.111:/home/pi/workspace/laserFeedback/run.sh
-#_assh_bpi@10.55.34.111_b_ahome_api_aworkspace_alaserFeedback_arun.sh#
