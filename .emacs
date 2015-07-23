@@ -1,4 +1,4 @@
-;;; The package manager config
+;; The package manager config
 
 ;;; Code:
 (require 'package)
@@ -18,9 +18,12 @@
 (setq linum-format "%4d \u2502 ")
 (global-linum-mode 1)
 (require 'company)
-  (add-to-list 'company-backends 'company-anaconda)
+(require 'python-mode)
+;  (add-to-list 'company-backends 'company-anaconda)
 (add-hook 'after-init-hook 'global-company-mode)
-(add-hook 'python-mode-hook 'anaconda-mode)
+(with-eval-after-load 'company
+  '(autoload ‘company-mode “company” nil t))
+; (add-hook 'python-mode-hook 'anaconda-mode)
 (sml/setup)
 (add-hook 'prog-mode-hook 'paredit-everywhere-mode)
 (add-hook 'after-init-hook 'electric-pair-mode)
@@ -36,3 +39,23 @@
 (setq ido-vertical-define-keys 'C-n-and-C-p-only)
 (setq backup-directory-alist '(("." . "~/.saves"))) ; Put the backups in their correct place
 (setq backup-by-copying t)
+(menu-bar-mode -1) ; Disable menu bar
+(require 'evil-surround)
+(global-evil-surround-mode 1)
+(setq evil-move-cursor-back nil)
+(unless (display-graphic-p)
+  (require 'evil-terminal-cursor-changer))
+(require 'powerline)
+(require 'powerline-evil)
+(powerline-evil-center-color-theme)
+(add-hook 'after-init-hook 'global-color-identifiers-mode)
+(add-hook 'prog-mode-hook #'rainbow-delimiters-mode)
+(require 'helm); helm stuff
+(require 'helm-config)
+(global-set-key (kbd "C-c h") 'helm-command-prefix)
+(global-unset-key (kbd "C-x c"))
+(global-set-key (kbd "C-x C-f") 'helm-find-files)
+(global-set-key (kbd "M-x") 'helm-M-x)
+(global-set-key (kbd "C-x b") 'helm-buffers-list)
+(helm-mode 1)
+(windmove-default-keybindings)
