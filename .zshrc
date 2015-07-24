@@ -82,10 +82,14 @@ source $ZSH/oh-my-zsh.sh
 export PATH="/usr/local/heroku/bin:$PATH"
 
 # Added by Josh for tmux 10.12.14
-export EDITOR='vim'
+export EDITOR='emacs'
 export SHELL='zsh'
 
 # Support for 256 color xterm
 if [ -n "$DISPLAY" -a "$TERM" '==' "xterm" ]; then
     export TERM='xterm-256color'
 fi
+
+# emacs
+alias emacsserver="emacs --daemon"
+alias em="emacsclient -t"
