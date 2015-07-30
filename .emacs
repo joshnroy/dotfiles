@@ -11,22 +11,28 @@
     (package-refresh-contents))
 
 ;;; The package config
+(require 'evil-leader)
+(evil-leader/set-leader "<SPC>")
+(global-evil-leader-mode)
+(evil-leader/set-key
+  "b" 'helm-buffers-list
+  "f" 'helm-find-files
+  )
 (require 'evil)
   (evil-mode 1)
 (require 'evil-org)
+(require 'guide-key)
+(setq guide-key/guide-key-sequence t)
 (load-theme 'gotham t)
 (setq linum-format "%4d \u2502 ")
 (global-linum-mode 1)
-(require 'company)
+ (require 'company)
 (require 'python-mode)
-(defun my/python-mode-hook ()
-;  (add-to-list 'company-backends 'company-jedi)
-  (add-to-list 'company-backends 'company-jedi))
-(add-hook 'python-mode-hook 'my/python-mode-hook)
 (add-hook 'after-init-hook 'global-company-mode)
-(with-eval-after-load 'company
-  '(autoload ‘company-mode “company” nil t))
+ (with-eval-after-load 'company
+   '(autoload ‘company-mode “company” nil t))
 (add-hook 'python-mode-hook 'jedi:setup)
+(setq jedi:complete-on-dot t)
 (sml/setup)
 (add-hook 'prog-mode-hook 'paredit-everywhere-mode)
 (add-hook 'after-init-hook 'electric-pair-mode)
@@ -63,4 +69,20 @@
 (global-set-key (kbd "M-x") 'helm-M-x)
 (global-set-key (kbd "C-x b") 'helm-buffers-list)
 (helm-mode 1)
-(windmove-default-keybindings)
+(helm-autoresize-mode 1)
+;;; Windmove keybindings
+(global-set-key (kbd "M-h") 'windmove-left)
+(global-set-key (kbd "M-j") 'windmove-down)
+(global-set-key (kbd "M-k") 'windmove-up)
+(global-set-key (kbd "M-l") 'windmove-right)
+(setq backup-directory-alist
+      `((".*" . ,"~/.saves/auto")))
+(setq auto-save-file-name-transforms
+      `((".*" ,"~/.saves/auto" t)))
+(require 'py-autopep8)
+(add-hook 'python-mode-hook 'py-autopep8-enable-on-save)
+(require 'web-mode)
+(add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
+(package-initialize)
+(setq web-mode-enable-auto-pairing t)
+(ac-config-default)
