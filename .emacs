@@ -15,7 +15,7 @@
 (evil-leader/set-leader "<SPC>")
 (global-evil-leader-mode)
 (evil-leader/set-key
-  "b" 'helm-buffers-list
+  "b" 'helm-mini
   "f" 'helm-find-files
   )
 (require 'evil)
@@ -26,15 +26,11 @@
 (load-theme 'gotham t)
 (setq linum-format "%4d \u2502 ")
 (global-linum-mode 1)
- (require 'company)
 (require 'python-mode)
-(add-hook 'after-init-hook 'global-company-mode)
- (with-eval-after-load 'company
-   '(autoload ‘company-mode “company” nil t))
 (add-hook 'python-mode-hook 'jedi:setup)
 (setq jedi:complete-on-dot t)
 (sml/setup)
-(add-hook 'prog-mode-hook 'paredit-everywhere-mode)
+(require 'smartparens-config)
 (add-hook 'after-init-hook 'electric-pair-mode)
 (add-hook 'after-init-hook #'global-flycheck-mode)
 ; Map escape to cancel (like C-g)...
@@ -67,7 +63,7 @@
 (global-unset-key (kbd "C-x c"))
 (global-set-key (kbd "C-x C-f") 'helm-find-files)
 (global-set-key (kbd "M-x") 'helm-M-x)
-(global-set-key (kbd "C-x b") 'helm-buffers-list)
+(global-set-key (kbd "C-x b") 'helm-mini)
 (helm-mode 1)
 (helm-autoresize-mode 1)
 ;;; Windmove keybindings
@@ -86,3 +82,4 @@
 (package-initialize)
 (setq web-mode-enable-auto-pairing t)
 (ac-config-default)
+(setq desktop-save-mode 1)
