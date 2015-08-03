@@ -23,6 +23,8 @@
 (require 'evil-org)
 (require 'guide-key)
 (setq guide-key/guide-key-sequence t)
+(add-to-list 'load-path "~/.emacs.d/lalopmak-evil/")
+; (require 'lalopmak-evil)
 (load-theme 'gotham t)
 (setq linum-format "%4d \u2502 ")
 (global-linum-mode 1)
