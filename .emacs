@@ -37,11 +37,6 @@
 (define-key isearch-mode-map [escape] 'isearch-abort)   ;; isearch
 (define-key isearch-mode-map "\e" 'isearch-abort)   ;; \e seems to work better for terminals
 (global-set-key [escape] 'keyboard-escape-quit)         ;; everywhere else
-(require 'ido)
-(require 'ido-vertical-mode)
-(ido-mode 1)
-(ido-vertical-mode 1)
-(setq ido-vertical-define-keys 'C-n-and-C-p-only)
 (setq backup-directory-alist '(("." . "~/.saves"))) ; Put the backups in their correct place
 (setq backup-by-copying t)
 (menu-bar-mode -1) ; Disable menu bar
