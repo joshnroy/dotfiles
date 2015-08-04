@@ -21,7 +21,8 @@
   "f" 'helm-find-files
   "x" 'helm-M-x
   "ci" 'evilnc-comment-or-uncomment-lines
-  "/" 'ace-jump-mode
+  "<SPC>" 'ace-jump-mode
+  "w" 'save-buffer
   )
 (require 'evil)
   (evil-mode 1)
@@ -29,6 +30,7 @@
 (require 'guide-key)
 (evilnc-default-hotkeys)
 (setq guide-key/guide-key-sequence t)
+(guide-key-mode 1)
 (add-to-list 'load-path "~/.emacs.d/lalopmak-evil/")
 ; (require 'lalopmak-evil)
 (load-theme 'gotham t)
