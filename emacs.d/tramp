@@ -1,4 +1,4 @@
-;; -*- emacs-lisp -*- <15/08/04 11:28:49 /Users/jroy/.emacs.d/tramp>
+;; -*- emacs-lisp -*- <15/08/04 12:56:12 /Users/jroy/.emacs.d/tramp>
 ;; Tramp connection history.  Don't change this file.
 ;; You can delete it, forcing Tramp to reapply the checks.
 
@@ -21,4 +21,5 @@
   ("readlink" "\\readlink")
   ("ls" "/bin/ls --color=never")
   ("ls-dired" t)
-  ("uid-integer" 1000)))
+  ("uid-integer" 1000)
+  ("git" "\\git")))

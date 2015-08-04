@@ -1,6 +1,7 @@
 ;; The package manager config
 
 ;;; Code:
+(setq ring-bell-function 'ignore)
 (require 'package)
 (push '("marmalade" . "http://marmalade-repo.org/packages/")
       package-archives )
@@ -11,6 +12,7 @@
     (package-refresh-contents))
 
 ;;; The package config
+(require 'ace-jump-mode)
 (require 'evil-leader)
 (evil-leader/set-leader "<SPC>")
 (global-evil-leader-mode)
@@ -19,6 +21,7 @@
   "f" 'helm-find-files
   "x" 'helm-M-x
   "ci" 'evilnc-comment-or-uncomment-lines
+  "<SPC>" 'ace-jump-mode
   )
 (require 'evil)
   (evil-mode 1)
