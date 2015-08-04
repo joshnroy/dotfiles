@@ -17,11 +17,14 @@
 (evil-leader/set-key
   "b" 'helm-mini
   "f" 'helm-find-files
+  "x" 'helm-M-x
+  "ci" 'evilnc-comment-or-uncomment-lines
   )
 (require 'evil)
   (evil-mode 1)
 (require 'evil-org)
 (require 'guide-key)
+(evilnc-default-hotkeys)
 (setq guide-key/guide-key-sequence t)
 (add-to-list 'load-path "~/.emacs.d/lalopmak-evil/")
 ; (require 'lalopmak-evil)
