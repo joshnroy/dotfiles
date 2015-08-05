@@ -22,7 +22,6 @@
   "x" 'helm-M-x
   "ci" 'evilnc-comment-or-uncomment-lines
   "<SPC>" 'ace-jump-mode
-  "w" 'save-buffer
   )
 (require 'evil)
   (evil-mode 1)
@@ -88,3 +87,7 @@
 (setq web-mode-enable-auto-pairing t)
 (ac-config-default)
 (setq desktop-save-mode 1)
+(require 'ac-clang)
+(require 'yasnippet)
+(yas-global-mode 1)
+(cmake-ide-setup)
