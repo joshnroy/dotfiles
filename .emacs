@@ -91,3 +91,5 @@
 (require 'yasnippet)
 (yas-global-mode 1)
 (cmake-ide-setup)
+(require 'evil-snipe)
+(evil-snipe-mode 1)
