@@ -52,8 +52,6 @@
 (require 'evil-surround)
 (global-evil-surround-mode 1)
 (setq evil-move-cursor-back nil)
-(unless (display-graphic-p)
-  (require 'evil-terminal-cursor-changer))
 (setq evil-normal-state-modes (append evil-emacs-state-modes evil-normal-state-modes))
 (setq evil-emacs-state-modes nil)
 (require 'powerline)
@@ -93,3 +91,7 @@
 (cmake-ide-setup)
 (require 'evil-snipe)
 (evil-snipe-mode 1)
+(require 'evil-terminal-cursor-changer)
+(setq evil-visual-state-cursor '("red" box)); █
+(setq evil-insert-state-cursor '("green" bar)); ⎸
+(setq evil-emacs-state-cursor '("blue" hbar)); _
