@@ -95,3 +95,5 @@
 (setq evil-visual-state-cursor '("red" box)); █
 (setq evil-insert-state-cursor '("green" bar)); ⎸
 (setq evil-emacs-state-cursor '("blue" hbar)); _
+(dolist (hook '(text-mode-hook))
+  (add-hook hook (lambda () (flyspell-mode 1))))
