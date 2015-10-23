@@ -97,3 +97,9 @@
 (setq evil-emacs-state-cursor '("blue" hbar)); _
 (dolist (hook '(text-mode-hook))
   (add-hook hook (lambda () (flyspell-mode 1))))
+(require 'whitespace)
+(setq whitespace-line-column 80) ;; limit line length
+(setq whitespace-style '(face lines-tail))
+(global-whitespace-mode +1)
+(require 'column-marker)
+(add-hook 'global-mode-hook (lambda () (interactive) (column-marker-1 80)))

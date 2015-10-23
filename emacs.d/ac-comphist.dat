@@ -1,4 +1,8 @@
-((("rapidjson" .
+((("require" .
+   [1 0 0 0 0 0 0])
+  ("global-whitespace-mode" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("rapidjson" .
    [0 0 0 0 0 2 0 0 0])
   ("result" .
    [0 0 0 0 1 0])
