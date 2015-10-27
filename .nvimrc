@@ -11,6 +11,7 @@ Plug 'scrooloose/syntastic'
 Plug 'vim-scripts/automaticlatexplugin'
 Plug 'edkolev/tmuxline.vim'
 Plug 'groenewege/vim-less'
+Plug 'def-lkb/ocp-indent-vim'
 
 call plug#end()
 
@@ -58,3 +59,7 @@ let g:airline_theme = 'gotham'
 " Unite
 nnoremap <leader>f :<C-u>Unite -no-split -buffer-name=files file<cr>
 nnoremap <leader>b :<C-u>Unite -no-split -buffer-name=buffers buffer<cr>
+
+" Ocaml settings
+execute "set rtp+=/home/jroy1/.opam/system/share/merlin/vim"
+let g:syntastic_ocaml_checkers=['merlin']
