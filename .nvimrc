@@ -6,12 +6,15 @@ Plug 'bling/vim-airline'
 Plug 'whatyouhide/vim-gotham'
 Plug 'raimondi/delimitmate'
 Plug 'tpope/vim-surround'
+Plug 'tpope/vim-fugitive'
 Plug 'valloric/youcompleteme'
 Plug 'scrooloose/syntastic'
 Plug 'vim-scripts/automaticlatexplugin'
 Plug 'edkolev/tmuxline.vim'
 Plug 'groenewege/vim-less'
 Plug 'def-lkb/ocp-indent-vim'
+Plug 'scrooloose/nerdcommenter'
+Plug 'christoomey/vim-tmux-navigator'
 
 call plug#end()
 
@@ -38,14 +41,9 @@ set hidden
 set showtabline=0
 set splitbelow
 set splitright
-
-" spell checker
-
-" Switch between splits with crtl-key
-nnoremap <C-J> <C-W>j
-nnoremap <C-K> <C-W>k
-nnoremap <C-H> <C-W>h
-nnoremap <C-L> <C-W>l
+filetype plugin on
+set ttimeoutlen=50
+set laststatus=2
 
 " Map the leader key to SPACE
 let mapleader="\<SPACE>"
@@ -54,12 +52,12 @@ let mapleader="\<SPACE>"
 colorscheme gotham
 
 "airline settings
-let g:airline_theme = 'gotham'
+" let g:airline_theme = 'gotham'
 
 " Unite
 nnoremap <leader>f :<C-u>Unite -no-split -buffer-name=files file<cr>
 nnoremap <leader>b :<C-u>Unite -no-split -buffer-name=buffers buffer<cr>
 
 " Ocaml settings
-execute "set rtp+=/home/jroy1/.opam/system/share/merlin/vim"
-let g:syntastic_ocaml_checkers=['merlin']
+" execute "set rtp+=/home/jroy1/.opam/system/share/merlin/vim"
+" let g:syntastic_ocaml_checkers=['merlin']
