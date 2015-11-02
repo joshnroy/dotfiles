@@ -44,6 +44,10 @@ set splitright
 filetype plugin on
 set ttimeoutlen=50
 set laststatus=2
+set colorcolumn=80
+
+" Stop vim from moving the cursor back when pressing esc
+inoremap <silent> <Esc> <C-O>:stopinsert<CR>
 
 " Map the leader key to SPACE
 let mapleader="\<SPACE>"
@@ -59,5 +63,4 @@ nnoremap <leader>f :<C-u>Unite -no-split -buffer-name=files file<cr>
 nnoremap <leader>b :<C-u>Unite -no-split -buffer-name=buffers buffer<cr>
 
 " Ocaml settings
-" execute "set rtp+=/home/jroy1/.opam/system/share/merlin/vim"
-" let g:syntastic_ocaml_checkers=['merlin']
+"execute "set rtp+=/home/jroy1/.opam/system/share/merlin/vim"
