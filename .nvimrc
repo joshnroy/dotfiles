@@ -13,6 +13,7 @@ Plug 'edkolev/tmuxline.vim'
 Plug 'groenewege/vim-less'
 Plug 'def-lkb/ocp-indent-vim'
 Plug 'scrooloose/nerdcommenter'
+Plug 'christoomey/vim-tmux-navigator'
 
 call plug#end()
 
@@ -62,5 +63,9 @@ nnoremap <leader>f :<C-u>Unite -no-split -buffer-name=files file<cr>
 nnoremap <leader>b :<C-u>Unite -no-split -buffer-name=buffers buffer<cr>
 
 " Ocaml settings
-execute "set rtp+=/home/josh/.opam/system/share/merlin/vim"
-let g:syntastic_ocaml_checkers=['merlin']
+"let g:opamshare = substitute(system('opam config var share'),'\n$','','''')
+"execute "set rtp+=" . g:opamshare . "/merlin/vim"
+"let g:syntastic_ocaml_checkers=['merlin']
+
+" for dvorak when I switch to it
+"runtime! macros/dvorak.vim
