@@ -62,11 +62,5 @@ colorscheme gotham
 nnoremap <leader>f :<C-u>Unite -no-split -buffer-name=files file<cr>
 nnoremap <leader>b :<C-u>Unite -no-split -buffer-name=buffers buffer<cr>
 
-" Ocaml settings
-<<<<<<< HEAD
-"let g:opamshare = substitute(system('opam config var share'),'\n$','','''')
-"execute "set rtp+=" . g:opamshare . "/merlin/vim"
-"let g:syntastic_ocaml_checkers=['merlin']
-
 " for dvorak when I switch to it
 "runtime! macros/dvorak.vim
