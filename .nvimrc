@@ -7,7 +7,6 @@ Plug 'whatyouhide/vim-gotham'
 Plug 'raimondi/delimitmate'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-fugitive'
-Plug 'valloric/youcompleteme'
 Plug 'scrooloose/syntastic'
 Plug 'vim-scripts/automaticlatexplugin'
 Plug 'edkolev/tmuxline.vim'
@@ -15,6 +14,10 @@ Plug 'groenewege/vim-less'
 Plug 'def-lkb/ocp-indent-vim'
 Plug 'scrooloose/nerdcommenter'
 Plug 'christoomey/vim-tmux-navigator'
+Plug 'tpope/vim-obsession'
+Plug 'Shougo/deoplete.nvim'
+Plug 'Shougo/neosnippet.vim'
+Plug 'digitaltoad/vim-jade'
 
 call plug#end()
 
@@ -45,6 +48,7 @@ filetype plugin on
 set ttimeoutlen=50
 set laststatus=2
 set colorcolumn=80
+set textwidth=79
 
 " Stop vim from moving the cursor back when pressing esc
 inoremap <silent> <Esc> <C-O>:stopinsert<CR>
@@ -64,3 +68,25 @@ nnoremap <leader>b :<C-u>Unite -no-split -buffer-name=buffers buffer<cr>
 
 " for dvorak when I switch to it
 "runtime! macros/dvorak.vim
+" Use deoplete.
+let g:deoplete#enable_at_startup = 1
+" <Tab> completion:
+" 1. If popup menu is visible, select and insert next item
+" 2. Otherwise, if preceding chars are whitespace, insert tab char
+" 3. Otherwise, start manual autocomplete
+inoremap <silent><expr><Tab> pumvisible() ? "\<C-n>"
+  \ : (<SID>is_whitespace() ? "\<Tab>"
+  \ : (neosnippet#expandable_or_jumpable() ? "\<Plug>(neosnippet_expand_or_jump)"
+  \ : deoplete#mappings#manual_complete()))
+
+snoremap <silent><expr><Tab> pumvisible() ? "\<C-n>"
+  \ : (<SID>is_whitespace() ? "\<Tab>"
+  \ : (neosnippet#expandable_or_jumpable() ? "\<Plug>(neosnippet_expand_or_jump)"
+  \ : deoplete#mappings#manual_complete()))
+
+inoremap <expr><S-Tab>  pumvisible() ? "\<C-p>" : "\<C-h>"
+
+function! s:is_whitespace() "{{{
+	let col = col('.') - 1
+	return !col || getline('.')[col - 1]  =~? '\s'
+endfunction "}}}
