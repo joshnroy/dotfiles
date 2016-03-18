@@ -18,6 +18,8 @@ Plug 'tpope/vim-obsession'
 Plug 'Shougo/deoplete.nvim'
 Plug 'Shougo/neosnippet.vim'
 Plug 'digitaltoad/vim-jade'
+Plug 'vim-pandoc/vim-pandoc'
+Plug 'vim-pandoc/vim-pandoc-syntax' 
 
 call plug#end()
 
