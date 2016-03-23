@@ -20,6 +20,8 @@ Plug 'Shougo/neosnippet.vim'
 Plug 'digitaltoad/vim-jade'
 Plug 'vim-pandoc/vim-pandoc'
 Plug 'vim-pandoc/vim-pandoc-syntax' 
+Plug 'git://github.com/altercation/vim-colors-solarized.git'
+Plug 'blindFS/vim-taskwarrior'
 
 call plug#end()
 
@@ -38,6 +40,7 @@ set magic
 set noerrorbells
 set novisualbell
 syntax on
+syntax enable
 set foldenable
 set nowrap
 set clipboard=unnamedplus
@@ -59,7 +62,10 @@ inoremap <silent> <Esc> <C-O>:stopinsert<CR>
 let mapleader="\<SPACE>"
 
 " colorscheme
-colorscheme gotham
+" "colorscheme gotham
+set background=dark
+colorscheme solarized
+
 
 "airline settings
 " let g:airline_theme = 'gotham'
