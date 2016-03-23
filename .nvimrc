@@ -13,7 +13,6 @@ Plug 'edkolev/tmuxline.vim'
 Plug 'groenewege/vim-less'
 Plug 'def-lkb/ocp-indent-vim'
 Plug 'scrooloose/nerdcommenter'
-Plug 'christoomey/vim-tmux-navigator'
 Plug 'tpope/vim-obsession'
 Plug 'Shougo/deoplete.nvim'
 Plug 'Shougo/neosnippet.vim'
@@ -55,6 +54,19 @@ set ttimeoutlen=50
 set laststatus=2
 set colorcolumn=80
 set textwidth=79
+
+" Neovim Terminal Bindings
+tnoremap <Esc> <C-\><C-n>
+tnoremap <A-h> <C-\><C-n><C-w>h
+tnoremap <A-j> <C-\><C-n><C-w>j
+tnoremap <A-k> <C-\><C-n><C-w>k
+tnoremap <A-l> <C-\><C-n><C-w>l
+
+" Moving between splits bindings
+nnoremap <A-h> <C-w>h
+nnoremap <A-j> <C-w>j
+nnoremap <A-k> <C-w>k
+nnoremap <A-l> <C-w>l
 
 " Stop vim from moving the cursor back when pressing esc
 inoremap <silent> <Esc> <C-O>:stopinsert<CR>
