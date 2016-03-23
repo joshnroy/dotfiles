@@ -1,6 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =4
-let g:netrw_dirhist_1='/Users/joshroy/Library/Application Support/Tunnelblick/Configurations/client.tblk'
-let g:netrw_dirhist_2='/Users/joshroy/Documents/Workspace/BeaverBots/temp_site/bvrbots.github.io/.git'
-let g:netrw_dirhist_3='/Users/joshroy'
-let g:netrw_dirhist_4='/gpfs/main/home/jroy1/.vim'
