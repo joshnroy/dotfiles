@@ -7,7 +7,7 @@ Plug 'whatyouhide/vim-gotham'
 Plug 'raimondi/delimitmate'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-fugitive'
-Plug 'scrooloose/syntastic'
+Plug 'benekastah/neomake'
 Plug 'vim-scripts/automaticlatexplugin'
 Plug 'edkolev/tmuxline.vim'
 Plug 'groenewege/vim-less'
@@ -67,6 +67,9 @@ nnoremap <A-h> <C-w>h
 nnoremap <A-j> <C-w>j
 nnoremap <A-k> <C-w>k
 nnoremap <A-l> <C-w>l
+
+" Make neomake run
+autocmd! BufWritePost,BufEnter * Neomake
 
 " Stop vim from moving the cursor back when pressing esc
 inoremap <silent> <Esc> <C-O>:stopinsert<CR>
