@@ -26,6 +26,7 @@ Plug 'blindFS/vim-taskwarrior'
 call plug#end()
 
 
+" General Options
 set tabstop=2
 set shiftwidth=2
 set expandtab
@@ -62,20 +63,14 @@ inoremap <silent> <Esc> <C-O>:stopinsert<CR>
 let mapleader="\<SPACE>"
 
 " colorscheme
-" "colorscheme gotham
 set background=dark
 colorscheme solarized
 
-
-"airline settings
-" let g:airline_theme = 'gotham'
 
 " Unite
 nnoremap <leader>f :<C-u>Unite -no-split -buffer-name=files file<cr>
 nnoremap <leader>b :<C-u>Unite -no-split -buffer-name=buffers buffer<cr>
 
-" for dvorak when I switch to it
-"runtime! macros/dvorak.vim
 " Use deoplete.
 let g:deoplete#enable_at_startup = 1
 " <Tab> completion:
