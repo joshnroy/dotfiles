@@ -99,3 +99,5 @@ alias vim 'nvim'
 ## Vi mode
 bindkey -v
 export KEYTIMEOUT=0.1
+
+export DEFAULT_USER=josh
