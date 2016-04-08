@@ -5,7 +5,7 @@ export ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="minimal-path-git"
+ZSH_THEME="agnoster"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -45,7 +45,7 @@ ZSH_THEME="minimal-path-git"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-syntax-highlighting taskwarrior)
+plugins=(git zsh-syntax-highlighting taskwarrior vi-mode)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -95,3 +95,7 @@ alias vim 'nvim'
 
 # OPAM configuration
 . /Users/josh/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
+
+## Vi mode
+bindkey -v
+export KEYTIMEOUT=0.1

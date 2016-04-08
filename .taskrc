@@ -28,9 +28,9 @@ data.location=~/.task
 include /usr/local/Cellar/task/2.5.0/share/doc/task/rc/solarized-dark-256.theme
 #include /usr/local/Cellar/task/2.5.0/share/doc/task/rc/solarized-light-256.theme
 #include /usr/local/Cellar/task/2.5.0/share/doc/task/rc/no-color.theme
-
-taskd.server=freecinc.com:53589
-taskd.key=\/Users\/josh\/.task\/freecinc_e71dabf7.key.pem
-taskd.certificate=\/Users\/josh\/.task\/freecinc_e71dabf7.cert.pem
-taskd.ca=\/Users\/josh\/.task\/freecinc_e71dabf7.ca.pem
-taskd.credentials=FreeCinc\/freecinc_e71dabf7\/07511a9d-0b9e-48e8-a2aa-13f2677c938e
+taskd.certificate=~/.task/private.certificate.pem
+taskd.key=~/.task/private.key.pem
+taskd.ca=~/.task/ca.cert.pem
+taskd.server=taskwarrior.inthe.am:53589
+taskd.credentials=inthe_am/joshnroy/d80abbe1-109e-449b-b018-cb641ca100ef
+taskd.trust=ignore hostname

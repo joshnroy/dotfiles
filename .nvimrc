@@ -54,6 +54,8 @@ set ttimeoutlen=50
 set laststatus=2
 set colorcolumn=80
 set textwidth=79
+set wrapmargin=5
+autocmd BufWritePre * :%s/\s\+$//e
 
 " Neovim Terminal Bindings
 tnoremap <Esc> <C-\><C-n>
@@ -70,6 +72,8 @@ nnoremap <A-l> <C-w>l
 
 " Make neomake run
 autocmd! BufWritePost,BufEnter * Neomake
+" Make neomake open error window
+let g:neomake_open_list = 2
 
 " Stop vim from moving the cursor back when pressing esc
 inoremap <silent> <Esc> <C-O>:stopinsert<CR>
