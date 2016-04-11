@@ -18,9 +18,10 @@ Plug 'Shougo/deoplete.nvim'
 Plug 'Shougo/neosnippet.vim'
 Plug 'digitaltoad/vim-jade'
 Plug 'vim-pandoc/vim-pandoc'
-Plug 'vim-pandoc/vim-pandoc-syntax' 
+Plug 'vim-pandoc/vim-pandoc-syntax'
 Plug 'git://github.com/altercation/vim-colors-solarized.git'
 Plug 'blindFS/vim-taskwarrior'
+Plug 'derekwyatt/vim-scala'
 
 call plug#end()
 
@@ -46,7 +47,6 @@ set nowrap
 set clipboard=unnamedplus
 set mouse=a
 set hidden
-set showtabline=0
 set splitbelow
 set splitright
 filetype plugin on
@@ -88,7 +88,7 @@ colorscheme solarized
 
 " Unite
 nnoremap <leader>f :<C-u>Unite -no-split -buffer-name=files file<cr>
-nnoremap <leader>b :<C-u>Unite -no-split -buffer-name=buffers buffer<cr>
+nnoremap <leader>b :<C-u>Unite -no-split -buffer-name=buffers tab<cr>
 
 " Use deoplete.
 let g:deoplete#enable_at_startup = 1
