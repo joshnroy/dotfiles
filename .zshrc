@@ -91,7 +91,8 @@ if [ -n "$DISPLAY" -a "$TERM" '==' "xterm" ]; then
 fi
 
 #nvim
-alias vim 'nvim'
+alias vim=nvim
+alias vi=nvim
 
 # OPAM configuration
 . /Users/josh/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
@@ -99,5 +100,6 @@ alias vim 'nvim'
 ## Vi mode
 bindkey -v
 export KEYTIMEOUT=0.1
+bindkey ‘^R’ history-incremental-search-backward
 
 export DEFAULT_USER=josh
