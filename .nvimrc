@@ -7,7 +7,7 @@ Plug 'whatyouhide/vim-gotham'
 Plug 'raimondi/delimitmate'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-fugitive'
-Plug 'benekastah/neomake'
+"Plug 'benekastah/neomake'
 Plug 'vim-scripts/automaticlatexplugin'
 Plug 'edkolev/tmuxline.vim'
 Plug 'groenewege/vim-less'
@@ -22,6 +22,8 @@ Plug 'vim-pandoc/vim-pandoc-syntax'
 Plug 'git://github.com/altercation/vim-colors-solarized.git'
 Plug 'blindFS/vim-taskwarrior'
 Plug 'derekwyatt/vim-scala'
+Plug 'https://github.com/keith/tmux.vim.git'
+Plug 'https://github.com/christoomey/vim-tmux-navigator.git'
 
 call plug#end()
 
@@ -65,15 +67,18 @@ tnoremap <A-k> <C-\><C-n><C-w>k
 tnoremap <A-l> <C-\><C-n><C-w>l
 
 " Moving between splits bindings
-nnoremap <A-h> <C-w>h
-nnoremap <A-j> <C-w>j
-nnoremap <A-k> <C-w>k
-nnoremap <A-l> <C-w>l
+let g:tmux_navigator_no_mappings = 1
+
+nnoremap <silent> <A-h> :TmuxNavigateLeft<cr>
+nnoremap <silent> <A-j> :TmuxNavigateDown<cr>
+nnoremap <silent> <A-k> :TmuxNavigateUp<cr>
+nnoremap <silent> <A-l> :TmuxNavigateRight<cr>
+nnoremap <silent> <A-p> :TmuxNavigatePrevious<cr>
 
 " Make neomake run
-autocmd! BufWritePost,BufEnter * Neomake
+"autocmd! BufWritePost,BufEnter * Neomake
 " Make neomake open error window
-let g:neomake_open_list = 2
+"let g:neomake_open_list = 2
 
 " Stop vim from moving the cursor back when pressing esc
 inoremap <silent> <Esc> <C-O>:stopinsert<CR>
@@ -85,10 +90,10 @@ let mapleader="\<SPACE>"
 set background=dark
 colorscheme solarized
 
+" Splitting
+nnoremap <Leader>v :vsplit<cr>
+nnoremap <Leader>s :split<cr>
 
-" Unite
-nnoremap <leader>f :<C-u>Unite -no-split -buffer-name=files file<cr>
-nnoremap <leader>b :<C-u>Unite -no-split -buffer-name=buffers tab<cr>
 
 " Use deoplete.
 let g:deoplete#enable_at_startup = 1
