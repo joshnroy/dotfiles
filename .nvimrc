@@ -1,18 +1,15 @@
 " This is all of the plugin stuffs
 call plug#begin('~/.vim/plugged')
 
-Plug 'shougo/unite.vim'
 Plug 'bling/vim-airline'
-Plug 'whatyouhide/vim-gotham'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'raimondi/delimitmate'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-fugitive'
 Plug 'benekastah/neomake'
 Plug 'vim-scripts/automaticlatexplugin'
 Plug 'edkolev/tmuxline.vim'
-Plug 'groenewege/vim-less'
 Plug 'def-lkb/ocp-indent-vim'
-Plug 'scrooloose/nerdcommenter'
 Plug 'tpope/vim-obsession'
 Plug 'Shougo/deoplete.nvim'
 Plug 'Shougo/neosnippet.vim'
@@ -20,7 +17,6 @@ Plug 'digitaltoad/vim-jade'
 Plug 'vim-pandoc/vim-pandoc'
 Plug 'vim-pandoc/vim-pandoc-syntax'
 Plug 'git://github.com/altercation/vim-colors-solarized.git'
-Plug 'blindFS/vim-taskwarrior'
 Plug 'derekwyatt/vim-scala'
 
 call plug#end()
@@ -44,7 +40,7 @@ syntax on
 syntax enable
 set foldenable
 set nowrap
-set clipboard=unnamedplus
+set clipboard+=unnamedplus
 set mouse=a
 set hidden
 set splitbelow
@@ -85,10 +81,9 @@ let mapleader="\<SPACE>"
 set background=dark
 colorscheme solarized
 
+" Airline colorscheme
+let g:airline_theme='solarized'
 
-" Unite
-nnoremap <leader>f :<C-u>Unite -no-split -buffer-name=files file<cr>
-nnoremap <leader>b :<C-u>Unite -no-split -buffer-name=buffers tab<cr>
 
 " Use deoplete.
 let g:deoplete#enable_at_startup = 1
