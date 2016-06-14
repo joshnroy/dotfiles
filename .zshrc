@@ -103,3 +103,8 @@ export KEYTIMEOUT=0.1
 bindkey ‘^R’ history-incremental-search-backward
 
 export DEFAULT_USER=josh
+
+# For drone stuff
+source /opt/ros/indigo/setup.zsh
+source ~/catkin_ws/install/setup.zsh
+source ~/catkin_ws/devel/setup.zsh

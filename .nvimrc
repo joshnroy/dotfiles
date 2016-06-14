@@ -6,7 +6,6 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'raimondi/delimitmate'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-fugitive'
-"Plug 'benekastah/neomake'
 Plug 'vim-scripts/automaticlatexplugin'
 Plug 'edkolev/tmuxline.vim'
 Plug 'def-lkb/ocp-indent-vim'
@@ -20,6 +19,7 @@ Plug 'git://github.com/altercation/vim-colors-solarized.git'
 Plug 'derekwyatt/vim-scala'
 Plug 'https://github.com/keith/tmux.vim.git'
 Plug 'https://github.com/christoomey/vim-tmux-navigator.git'
+Plug 'neomake/neomake'
 
 call plug#end()
 
@@ -31,6 +31,7 @@ set expandtab
 set smarttab
 set smartindent
 set autoindent
+set relativenumber
 set number
 set ruler
 set showcmd
@@ -72,9 +73,9 @@ nnoremap <silent> <A-l> :TmuxNavigateRight<cr>
 nnoremap <silent> <A-p> :TmuxNavigatePrevious<cr>
 
 " Make neomake run
-"autocmd! BufWritePost,BufEnter * Neomake
+autocmd! BufWritePost * Neomake
 " Make neomake open error window
-"let g:neomake_open_list = 2
+" let g:neomake_open_list = 2
 
 " Stop vim from moving the cursor back when pressing esc
 inoremap <silent> <Esc> <C-O>:stopinsert<CR>
