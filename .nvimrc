@@ -35,6 +35,7 @@ set expandtab
 set smarttab
 set smartindent
 set autoindent
+set relativenumber
 set number
 set ruler
 set showcmd
