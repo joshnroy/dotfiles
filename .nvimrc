@@ -6,6 +6,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'raimondi/delimitmate'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-commentary'
 Plug 'vim-scripts/automaticlatexplugin'
 Plug 'edkolev/tmuxline.vim'
 Plug 'def-lkb/ocp-indent-vim'
@@ -84,6 +85,7 @@ inoremap <silent> <Esc> <C-O>:stopinsert<CR>
 let mapleader="\<SPACE>"
 
 " colorscheme
+let g:solarized_termtrans=1
 set background=dark
 colorscheme solarized
 
