@@ -11,7 +11,7 @@ Plug 'vim-scripts/automaticlatexplugin'
 Plug 'edkolev/tmuxline.vim'
 Plug 'def-lkb/ocp-indent-vim'
 Plug 'tpope/vim-obsession'
-Plug 'Shougo/deoplete.nvim'
+Plug 'valloric/YouCompleteMe'
 Plug 'Shougo/neosnippet.vim'
 Plug 'digitaltoad/vim-jade'
 Plug 'vim-pandoc/vim-pandoc'
@@ -86,7 +86,7 @@ let mapleader="\<SPACE>"
 
 " colorscheme
 let g:solarized_termtrans=1
-set background=dark
+set background=light
 colorscheme solarized
 
 " Airline colorscheme
@@ -94,27 +94,3 @@ let g:airline_theme='solarized'
 " Splitting
 nnoremap <Leader>v :vsplit<cr>
 nnoremap <Leader>s :split<cr>
-
-
-" Use deoplete.
-let g:deoplete#enable_at_startup = 1
-" <Tab> completion:
-" 1. If popup menu is visible, select and insert next item
-" 2. Otherwise, if preceding chars are whitespace, insert tab char
-" 3. Otherwise, start manual autocomplete
-inoremap <silent><expr><Tab> pumvisible() ? "\<C-n>"
-  \ : (<SID>is_whitespace() ? "\<Tab>"
-  \ : (neosnippet#expandable_or_jumpable() ? "\<Plug>(neosnippet_expand_or_jump)"
-  \ : deoplete#mappings#manual_complete()))
-
-snoremap <silent><expr><Tab> pumvisible() ? "\<C-n>"
-  \ : (<SID>is_whitespace() ? "\<Tab>"
-  \ : (neosnippet#expandable_or_jumpable() ? "\<Plug>(neosnippet_expand_or_jump)"
-  \ : deoplete#mappings#manual_complete()))
-
-inoremap <expr><S-Tab>  pumvisible() ? "\<C-p>" : "\<C-h>"
-
-function! s:is_whitespace() "{{{
-	let col = col('.') - 1
-	return !col || getline('.')[col - 1]  =~? '\s'
-endfunction "}}}
