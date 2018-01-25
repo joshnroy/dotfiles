@@ -2,6 +2,9 @@
 call plug#begin('~/.vim/plugged')
 
 Plug 'chriskempson/base16-vim'
+Plug 'tpope/vim-surround'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 
 call plug#end()
 
@@ -35,4 +38,5 @@ set textwidth=79
 set wrapmargin=5
 
 " Colorscheme
-colorscheme base16-default-dark
+colorscheme base16-dracula
+let g:airline_theme='base16'
