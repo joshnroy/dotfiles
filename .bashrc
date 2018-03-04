@@ -115,10 +115,13 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
-source /opt/ros/kinetic/setup.bash
+#source /opt/ros/kinetic/setup.bash
+source /opt/ros/ardent/setup.bash
 export EDITOR="vim"
 export PATH=~/usr/lib/blender:$PATH
 
 alias sshcs="ssh -Y jroy1@ssh.cs.brown.edu"
 alias sftpcs="sftp jroy1@ssh.cs.brown.edu"
 alias sshcsadm="ssh -Y jroy1@ssh.cs.brown.edu -t host=adminhost"
+alias sshcsfs="sshfs jroy1@ssh.cs.brown.edu: ~/csfs/"
+alias moshindra="mosh indra.devices.brown.edu"

@@ -12,6 +12,7 @@ Plug 'vim-pandoc/vim-pandoc'
 Plug 'vim-pandoc/vim-pandoc-syntax'
 Plug 'raimondi/delimitmate'
 Plug 'vim-syntastic/syntastic'
+Plug 'tpope/vim-commentary'
 
 call plug#end()
 
