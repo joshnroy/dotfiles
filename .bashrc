@@ -116,7 +116,7 @@ if ! shopt -oq posix; then
   fi
 fi
 #source /opt/ros/kinetic/setup.bash
-source /opt/ros/ardent/setup.bash
+# source /opt/ros/ardent/setup.bash
 export EDITOR="vim"
 alias sshcs="ssh -Y jroy1@ssh.cs.brown.edu"
 alias sftpcs="sftp jroy1@ssh.cs.brown.edu"
