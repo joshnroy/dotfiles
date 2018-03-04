@@ -3,6 +3,7 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'chriskempson/base16-vim'
 Plug 'tpope/vim-surround'
+Plug 'tpope/vim-commentary'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'edkolev/tmuxline.vim'
@@ -10,6 +11,8 @@ Plug 'vim-pandoc/vim-pandoc'
 Plug 'vim-pandoc/vim-pandoc-syntax'
 Plug 'tpope/vim-commentary'
 Plug 'valloric/youcompleteme'
+Plug 'raimondi/delimitmate'
+Plug 'vim-syntastic/syntastic'
 
 call plug#end()
 
@@ -41,7 +44,11 @@ set laststatus=2
 set colorcolumn=80
 set textwidth=79
 set wrapmargin=5
+set noswapfile
 
 " Colorscheme
 colorscheme base16-dracula
 let g:airline_theme='base16'
+
+" Syntax
+let g:syntastic_c_checkers = ['make']
