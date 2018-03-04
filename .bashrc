@@ -117,3 +117,4 @@ if ! shopt -oq posix; then
 fi
 source /opt/ros/kinetic/setup.bash
 export EDITOR="vim"
+alias sshcs="ssh -Y jroy1@ssh.cs.brown.edu"
