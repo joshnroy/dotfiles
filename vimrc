@@ -18,11 +18,9 @@ Plug 'vim-pandoc/vim-pandoc-syntax'
 
 Plug 'valloric/youcompleteme'
 Plug 'neomake/neomake'
+Plug 'Chiel92/vim-autoformat'
 
 Plug 'mileszs/ack.vim'
-
-" Plug 'xolox/vim-easytags'
-" Plug 'xolox/vim-misc'
 
 call plug#end()
 
@@ -53,6 +51,7 @@ set colorcolumn=80
 set textwidth=79
 set noswapfile
 set noexpandtab
+set softtabstop=0
 set ignorecase
 set smartcase
 
@@ -81,12 +80,17 @@ set t_ZR=[23m
 " YouCompleteMe
 let g:ycm_autoclose_preview_window_after_completion=1
 
+" Autoformat
+let g:formatdef_google_cpp = 'clang-format -style=google'
+let g:formatters_cpp = ['google_cpp']
+au BufWrite * :Autoformat
+
 " Useful remappings
 " Searches for highlighted text in visual mode
 vnoremap // y/<C-R>"<CR>
 
 " For ctrlspace
-\let g:airline_exclude_preview = 1
+			\let g:airline_exclude_preview = 1
 
 " Neomake
 " Full config: when writing or reading a buffer, and on changes in insert and
