@@ -16,7 +16,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'vim-pandoc/vim-pandoc'
 Plug 'vim-pandoc/vim-pandoc-syntax'
 
-Plug 'valloric/youcompleteme'
+" Plug 'valloric/youcompleteme'
 Plug 'neomake/neomake'
 Plug 'Chiel92/vim-autoformat'
 
@@ -25,8 +25,8 @@ Plug 'mileszs/ack.vim'
 call plug#end()
 
 " General Options
-set tabstop=4
-set shiftwidth=4
+set tabstop=2
+set shiftwidth=2
 set smarttab
 set smartindent
 set autoindent
@@ -50,16 +50,18 @@ set laststatus=2
 set colorcolumn=80
 set textwidth=79
 set noswapfile
-set noexpandtab
+set expandtab
 set softtabstop=0
 set ignorecase
 set smartcase
+set clipboard=unnamedplus
 
 " Vim Control Space
 set showtabline=0
 let g:CtrlSpaceLoadLastWorkspaceOnStart = 1
 let g:CtrlSpaceSaveWorkspaceOnSwitch = 1
 let g:CtrlSpaceSaveWorkspaceOnExit = 1
+let g:CtrlSpaceDefaultMappingKey = "<C-space> "
 
 " Colorscheme
 set termguicolors
@@ -83,7 +85,6 @@ let g:ycm_autoclose_preview_window_after_completion=1
 " Autoformat
 let g:formatdef_google_cpp = 'clang-format -style=google'
 let g:formatters_cpp = ['google_cpp']
-au BufWrite * :Autoformat
 
 " Useful remappings
 " Searches for highlighted text in visual mode
