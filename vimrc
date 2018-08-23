@@ -16,7 +16,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'vim-pandoc/vim-pandoc'
 Plug 'vim-pandoc/vim-pandoc-syntax'
 
-" Plug 'valloric/youcompleteme'
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'neomake/neomake'
 Plug 'Chiel92/vim-autoformat'
 
@@ -85,6 +85,11 @@ let g:ycm_autoclose_preview_window_after_completion=1
 " Autoformat
 let g:formatdef_google_cpp = 'clang-format -style=google'
 let g:formatters_cpp = ['google_cpp']
+
+" Autocomplete
+let g:deoplete#enable_at_startup = 1
+let g:python_host_prog = '/home/josroy/.pyenv/versions/neovim2/bin/python'
+let g:python3_host_prog = '/home/josroy/.pyenv/versions/neovim3/bin/python'
 
 " Useful remappings
 " Searches for highlighted text in visual mode
