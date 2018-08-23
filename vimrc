@@ -83,20 +83,24 @@ set t_ZR=[23m
 let g:ycm_autoclose_preview_window_after_completion=1
 
 " Autoformat
-let g:formatdef_google_cpp = 'clang-format -style=google'
+let g:formatdef_google_cpp = '"astyle --mode=c --style=google"'
 let g:formatters_cpp = ['google_cpp']
 
 " Autocomplete
+" Enable deoplete
 let g:deoplete#enable_at_startup = 1
+" Set the locations of the python hosts
 let g:python_host_prog = '/home/josroy/.pyenv/versions/neovim2/bin/python'
 let g:python3_host_prog = '/home/josroy/.pyenv/versions/neovim3/bin/python'
+" Use 'tab' to cycle through completions
+inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
 
 " Useful remappings
 " Searches for highlighted text in visual mode
 vnoremap // y/<C-R>"<CR>
 
 " For ctrlspace
-			\let g:airline_exclude_preview = 1
+let g:airline_exclude_preview = 1
 
 " Neomake
 " Full config: when writing or reading a buffer, and on changes in insert and
