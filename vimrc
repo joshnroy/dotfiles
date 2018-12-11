@@ -9,24 +9,17 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'scrooloose/nerdtree'
 Plug 'vim-ctrlspace/vim-ctrlspace'
 
-Plug 'rakr/vim-one'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-
+Plug 'sheerun/vim-polyglot'
 Plug 'vim-pandoc/vim-pandoc'
 Plug 'vim-pandoc/vim-pandoc-syntax'
 
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'neomake/neomake'
-Plug 'Chiel92/vim-autoformat'
-
-Plug 'mileszs/ack.vim'
+Plug 'altercation/vim-colors-solarized'
 
 call plug#end()
 
 " General Options
-set tabstop=2
-set shiftwidth=2
+set tabstop=4
+set shiftwidth=4
 set smarttab
 set smartindent
 set autoindent
@@ -64,45 +57,16 @@ let g:CtrlSpaceSaveWorkspaceOnExit = 1
 let g:CtrlSpaceDefaultMappingKey = "<C-space> "
 
 " Colorscheme
-set termguicolors
 set background=dark
-colorscheme one
-let g:airline_theme='one'
-let g:one_allow_italics = 1
-set t_8b=[48;2;%lu;%lu;%lum
-set t_8f=[38;2;%lu;%lu;%lum
+colorscheme solarized
 
 " Powerline
-let g:airline_powerline_fonts = 1
+" let g:airline_powerline_fonts = 1
 
 " Italics
 set t_ZH=[3m
 set t_ZR=[23m
 
-" YouCompleteMe
-let g:ycm_autoclose_preview_window_after_completion=1
-
-" Autoformat
-let g:formatdef_google_cpp = '"astyle --mode=c --style=google"'
-let g:formatters_cpp = ['google_cpp']
-
-" Autocomplete
-" Enable deoplete
-let g:deoplete#enable_at_startup = 1
-" Set the locations of the python hosts
-let g:python_host_prog = '/home/josroy/.pyenv/versions/neovim2/bin/python'
-let g:python3_host_prog = '/home/josroy/.pyenv/versions/neovim3/bin/python'
-" Use 'tab' to cycle through completions
-inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
-
 " Useful remappings
 " Searches for highlighted text in visual mode
 vnoremap // y/<C-R>"<CR>
-
-" For ctrlspace
-let g:airline_exclude_preview = 1
-
-" Neomake
-" Full config: when writing or reading a buffer, and on changes in insert and
-" normal mode (after 1s; no delay when writing).
-call neomake#configure#automake('nrwi', 500)
