@@ -1,6 +1,6 @@
 #!/bin/bash
 git pull;
-rm $HOME/.vimrc
+rm $HOME/.config/nvim/init.vim
 rm $HOME/.tmux.conf
 # ln -s $HOME/dotfiles/vimrc $HOME/.vimrc;
 mkdir -p $HOME/.config/nvim
