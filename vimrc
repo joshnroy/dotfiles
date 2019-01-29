@@ -40,14 +40,15 @@ set splitright
 filetype plugin on
 set ttimeoutlen=50
 set laststatus=2
-set colorcolumn=80
-set textwidth=79
+set colorcolumn=100
+set textwidth=99
 set noswapfile
 set expandtab
 set softtabstop=0
 set ignorecase
 set smartcase
 set clipboard=unnamedplus
+set mouse=a
 
 " Vim Control Space
 set showtabline=0
