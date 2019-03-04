@@ -13,7 +13,8 @@ Plug 'sheerun/vim-polyglot'
 Plug 'vim-pandoc/vim-pandoc'
 Plug 'vim-pandoc/vim-pandoc-syntax'
 
-Plug 'altercation/vim-colors-solarized'
+Plug 'rakr/vim-one'
+Plug 'vim-airline/vim-airline'
 
 call plug#end()
 
@@ -40,8 +41,6 @@ set splitright
 filetype plugin on
 set ttimeoutlen=50
 set laststatus=2
-set colorcolumn=100
-set textwidth=99
 set noswapfile
 set expandtab
 set softtabstop=0
@@ -58,11 +57,14 @@ let g:CtrlSpaceSaveWorkspaceOnExit = 1
 let g:CtrlSpaceDefaultMappingKey = "<C-space> "
 
 " Colorscheme
+set termguicolors
+let g:one_allow_italics = 1
 set background=dark
-colorscheme solarized
+colorscheme one
+let g:airline_theme='one'
 
 " Powerline
-" let g:airline_powerline_fonts = 1
+let g:airline_powerline_fonts = 1
 
 " Italics
 set t_ZH=[3m
