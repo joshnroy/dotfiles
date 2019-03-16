@@ -94,3 +94,13 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# Alias stuff
+export PATH="/home/josh/.pyenv/bin:$PATH"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+export EDITOR="nvim"
+
+alias sshcs="ssh -Y jroy1@ssh.cs.brown.edu"
+alias sftpcs="sftp jroy1@ssh.cs.brown.edu"
+alias vpncs="sudo openvpn ~/Documents/browncs.ovpn"
