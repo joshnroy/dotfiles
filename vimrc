@@ -8,12 +8,13 @@ Plug 'jiangmiao/auto-pairs'
 
 Plug 'scrooloose/nerdtree'
 Plug 'vim-ctrlspace/vim-ctrlspace'
+Plug 'airblade/vim-gitgutter'
 
 Plug 'sheerun/vim-polyglot'
 Plug 'vim-pandoc/vim-pandoc'
 Plug 'vim-pandoc/vim-pandoc-syntax'
 
-Plug 'rakr/vim-one'
+Plug 'arcticicestudio/nord-vim'
 Plug 'vim-airline/vim-airline'
 
 call plug#end()
@@ -46,6 +47,7 @@ set expandtab
 set softtabstop=0
 set ignorecase
 set smartcase
+set cursorline
 set clipboard=unnamedplus
 set mouse=a
 
@@ -54,14 +56,16 @@ set showtabline=0
 let g:CtrlSpaceLoadLastWorkspaceOnStart = 1
 let g:CtrlSpaceSaveWorkspaceOnSwitch = 1
 let g:CtrlSpaceSaveWorkspaceOnExit = 1
-let g:CtrlSpaceDefaultMappingKey = "<C-space> "
+let g:CtrlSpaceDefaultMappingKey = "<C-Space> "
 
 " Colorscheme
-set termguicolors
-let g:one_allow_italics = 1
-set background=dark
-colorscheme one
-let g:airline_theme='one'
+colorscheme nord
+let g:nordm_comment_brightness = 15
+let g:nord_italic = 1
+let g_nord_underline = 1
+let g:nord_italic_comments = 1
+let g:nord_uniform_diff_background = 1
+let g:nord_cursor_line_number_background = 1
 
 " Powerline
 let g:airline_powerline_fonts = 1
