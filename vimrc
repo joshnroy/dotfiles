@@ -47,9 +47,12 @@ set expandtab
 set softtabstop=0
 set ignorecase
 set smartcase
-set cursorline
+" set cursorline
 set clipboard=unnamedplus
 set mouse=a
+
+" Set jk to escape
+imap jk <Esc>
 
 " Vim Control Space
 set showtabline=0
@@ -65,7 +68,7 @@ let g:nord_italic = 1
 let g_nord_underline = 1
 let g:nord_italic_comments = 1
 let g:nord_uniform_diff_background = 1
-let g:nord_cursor_line_number_background = 1
+" let g:nord_cursor_line_number_background = 1
 
 " Powerline
 let g:airline_powerline_fonts = 1
