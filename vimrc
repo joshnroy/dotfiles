@@ -14,8 +14,13 @@ Plug 'sheerun/vim-polyglot'
 Plug 'vim-pandoc/vim-pandoc'
 Plug 'vim-pandoc/vim-pandoc-syntax'
 
-Plug 'arcticicestudio/nord-vim'
+Plug 'mhartington/oceanic-next'
 Plug 'vim-airline/vim-airline'
+
+Plug 'JuliaEditorSupport/julia-vim'
+
+" Autocomplete
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 call plug#end()
 
@@ -62,16 +67,15 @@ let g:CtrlSpaceSaveWorkspaceOnExit = 1
 let g:CtrlSpaceDefaultMappingKey = "<C-Space> "
 
 " Colorscheme
-colorscheme nord
-let g:nordm_comment_brightness = 15
-let g:nord_italic = 1
-let g_nord_underline = 1
-let g:nord_italic_comments = 1
-let g:nord_uniform_diff_background = 1
-" let g:nord_cursor_line_number_background = 1
+if (has("termguicolors"))
+    set termguicolors
+endif
+colorscheme OceanicNext
+
 
 " Powerline
 let g:airline_powerline_fonts = 1
+let g:airline_theme='oceanicnext'
 
 " Italics
 set t_ZH=[3m
@@ -80,3 +84,30 @@ set t_ZR=[23m
 " Useful remappings
 " Searches for highlighted text in visual mode
 vnoremap // y/<C-R>"<CR>
+
+" Autocomplete
+" Better display for messages
+set cmdheight=2
+
+" You will have bad experience for diagnostic messages when it's default 4000.
+set updatetime=300
+
+" don't give |ins-completion-menu| messages.
+set shortmess+=c
+
+" always show signcolumns
+set signcolumn=yes
+
+" Use tab for trigger completion with characters ahead and navigate.
+" Use command ':verbose imap <tab>' to make sure tab is not mapped by other plugin.
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+
