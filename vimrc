@@ -14,7 +14,7 @@ Plug 'sheerun/vim-polyglot'
 Plug 'vim-pandoc/vim-pandoc'
 Plug 'vim-pandoc/vim-pandoc-syntax'
 
-Plug 'arcticicestudio/nord-vim'
+Plug 'altercation/vim-colors-solarized'
 Plug 'vim-airline/vim-airline'
 
 call plug#end()
@@ -62,13 +62,8 @@ let g:CtrlSpaceSaveWorkspaceOnExit = 1
 let g:CtrlSpaceDefaultMappingKey = "<C-Space> "
 
 " Colorscheme
-colorscheme nord
-let g:nordm_comment_brightness = 15
-let g:nord_italic = 1
-let g_nord_underline = 1
-let g:nord_italic_comments = 1
-let g:nord_uniform_diff_background = 1
-" let g:nord_cursor_line_number_background = 1
+set background=light
+colorscheme solarized
 
 " Powerline
 let g:airline_powerline_fonts = 1
