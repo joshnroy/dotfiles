@@ -62,7 +62,7 @@ ZSH_THEME="agnoster"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git, vi-mode)
+plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -104,3 +104,6 @@ export EDITOR="nvim"
 alias sshcs="ssh -Y jroy1@ssh.cs.brown.edu"
 alias sftpcs="sftp jroy1@ssh.cs.brown.edu"
 alias vpncs="sudo openvpn ~/Documents/browncs.ovpn"
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/josh/.mujoco/mujoco200/bin
+
+alias open=xdg-open
