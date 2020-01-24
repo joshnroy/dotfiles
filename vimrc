@@ -14,9 +14,9 @@ Plug 'sheerun/vim-polyglot'
 Plug 'vim-pandoc/vim-pandoc'
 Plug 'vim-pandoc/vim-pandoc-syntax'
 
-" Plug 'mhartington/oceanic-next'
 Plug 'chriskempson/base16-vim'
 Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 
 Plug 'JuliaEditorSupport/julia-vim'
 
@@ -74,10 +74,9 @@ if (has("termguicolors"))
 endif
 colorscheme base16-material
 
-
 " Powerline
 let g:airline_powerline_fonts = 1
-let g:airline_theme='oceanicnext'
+let g:airline_theme='solarized'
 
 " Italics
 set t_ZH=[3m
