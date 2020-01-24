@@ -57,6 +57,7 @@ set smartcase
 " set cursorline
 set clipboard=unnamedplus
 set mouse=a
+set cursorline
 
 " Set jk to escape
 imap jk <Esc>
