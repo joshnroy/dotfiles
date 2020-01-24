@@ -14,7 +14,8 @@ Plug 'sheerun/vim-polyglot'
 Plug 'vim-pandoc/vim-pandoc'
 Plug 'vim-pandoc/vim-pandoc-syntax'
 
-Plug 'mhartington/oceanic-next'
+" Plug 'mhartington/oceanic-next'
+Plug 'chriskempson/base16-vim'
 Plug 'vim-airline/vim-airline'
 
 Plug 'JuliaEditorSupport/julia-vim'
@@ -25,9 +26,10 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 
 " General Options
-set tabstop=4
-set shiftwidth=4
-set smarttab
+" set tabstop=4
+" set shiftwidth=4
+" set smarttab
+set noexpandtab
 set smartindent
 set autoindent
 set number
@@ -49,7 +51,7 @@ set ttimeoutlen=50
 set laststatus=2
 set noswapfile
 set expandtab
-set softtabstop=0
+" set softtabstop=0
 set ignorecase
 set smartcase
 " set cursorline
@@ -70,7 +72,7 @@ let g:CtrlSpaceDefaultMappingKey = "<C-Space> "
 if (has("termguicolors"))
     set termguicolors
 endif
-colorscheme OceanicNext
+colorscheme base16-material
 
 
 " Powerline
