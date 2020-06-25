@@ -96,14 +96,28 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # Alias stuff
-export PATH="/home/josh/.pyenv/bin:$PATH"
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
 export EDITOR="nvim"
+
+alias obsidian="Obsidian-0.4.0.AppImage"
 
 alias sshcs="ssh -Y jroy1@ssh.cs.brown.edu"
 alias sftpcs="sftp jroy1@ssh.cs.brown.edu"
-alias vpncs="sudo openvpn ~/Documents/browncs.ovpn"
+alias vpncs="sudo openvpn ~/Documents/VPN/jroy1_browncs.ovpn"
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/josh/.mujoco/mujoco200/bin
 
 alias open=xdg-open
+export PATH="$PATH:/home/josh/bin/julia-1.4.0/bin"
+autoload zmv
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/home/josh/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/home/josh/Downloads/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/home/josh/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/josh/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
+
+export PATH="$HOME/.emacs.d/bin:$PATH"
+
+# for pyenv
+export PATH="/home/josh/.pyenv/bin:$PATH"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
