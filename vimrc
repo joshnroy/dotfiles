@@ -6,7 +6,7 @@ syntax enable
 filetype plugin on
 
 " enable line numbers
-set nu
+set nu rnu
 
 " enable mouse
 set mouse=a
