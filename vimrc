@@ -11,6 +11,9 @@ set nu
 " enable mouse
 set mouse=a
 
+" set leader
+let mapleader=","
+
 " finding files
 set path+=**
 set wildmenu
@@ -25,3 +28,6 @@ let g:netrw_list_hide.=',\(^\|\s\s\)\zs\.\S\+'
 
 " remap jk to esc
 imap jk <Esc>
+
+" generate ctags
+nnoremap <leader>ct :!ctags -R .<CR>
