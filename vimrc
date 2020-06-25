@@ -14,6 +14,9 @@ set mouse=a
 " set leader
 let mapleader=","
 
+" set incremental search
+set incsearch
+
 " finding files
 set path+=**
 set wildmenu
