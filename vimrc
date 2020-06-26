@@ -12,7 +12,8 @@ set nu rnu
 set mouse=a
 
 " set leader
-let mapleader=","
+nnoremap <SPACE> <Nop>
+let mapleader=" "
 
 " set incremental search
 set incsearch
@@ -24,10 +25,18 @@ set wildmenu
 " folder browsing stuff
 let g:netrw_banner=0 " get rid of the banner
 let g:netrw_browse_split=4 " open in prior window
-let g:netrw_altv=1 " open split to the right
 let g:netrw_liststyle=3
 let g:netrw_list_hide=netrw_gitignore#Hide()
 let g:netrw_list_hide.=',\(^\|\s\s\)\zs\.\S\+'
+let g:netrw_winsize = 25
+
+nnoremap <leader>op :Vexplore<CR>
+
+" file finding stuff
+nnoremap <leader><SPACE> :find 
+
+" buffer stuff
+nnoremap <leader>bl :ls<CR>
 
 " remap jk to esc
 imap jk <Esc>
