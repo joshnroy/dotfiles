@@ -43,3 +43,8 @@ imap jk <Esc>
 
 " generate ctags
 nnoremap <leader>ct :!ctags -R .<CR>
+
+" put swap, undo, backup files in one place
+set backupdir=/tmp//
+set directory=/tmp//
+set undodir=/tmp//
