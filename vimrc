@@ -22,6 +22,12 @@ set incsearch
 set path+=**
 set wildmenu
 
+" indenting
+set tabstop=8
+set shiftwidth=4
+set autoindent
+set smartindent
+
 " folder browsing stuff
 let g:netrw_banner=0 " get rid of the banner
 let g:netrw_browse_split=4 " open in prior window
