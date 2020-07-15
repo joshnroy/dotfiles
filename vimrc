@@ -55,6 +55,11 @@ nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
+
+" splits open in better places
+set splitbelow
+set splitright
+
 " put swap, undo, backup files in one place
 set backupdir=/tmp//
 set directory=/tmp//
