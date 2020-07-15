@@ -22,6 +22,12 @@ set incsearch
 set path+=**
 set wildmenu
 
+" indenting
+set tabstop=8
+set shiftwidth=4
+set autoindent
+set smartindent
+
 " folder browsing stuff
 let g:netrw_banner=0 " get rid of the banner
 let g:netrw_browse_split=4 " open in prior window
@@ -49,3 +55,7 @@ nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
+" put swap, undo, backup files in one place
+set backupdir=/tmp//
+set directory=/tmp//
+set undodir=/tmp//
