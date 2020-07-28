@@ -59,3 +59,10 @@ nnoremap <C-H> <C-W><C-H>
 set backupdir=/tmp//
 set directory=/tmp//
 set undodir=/tmp//
+
+" Persistent undo
+set undofile
+set undodir=$HOME/.vim/undo
+set undolevels=1000
+set undoreload=10000
+set hidden
