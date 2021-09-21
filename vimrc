@@ -5,12 +5,19 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'junegunn/fzf', {'do': {-> fzf#install()}}
 Plug 'junegunn/fzf.vim'
 Plug 'puremourning/vimspector'
+Plug 'jiangmiao/auto-pairs'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'ryanoasis/vim-devicons'
 
 " Initialize plugin system
 call plug#end()
 
 " Don't pretend to be vi
 set nocompatible
+
+" Set encoding
+set encoding=UTF-8
 
 " enable syntax and fieltype plugins
 syntax enable
@@ -237,3 +244,7 @@ nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 
 " Debugging stuff (vimspector)
 let g:vimspector_enable_mappings = 'HUMAN'
+
+" Airline stuff
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
