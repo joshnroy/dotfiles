@@ -49,8 +49,8 @@ zsh/.zshrc                         # Zsh with Oh My Zsh, aliases, conda, Starshi
 ## AeroSpace (Tiling WM)
 
 - **Modifier key**: Alt (Option)
-- **Navigation**: `jkl;` (NOT hjkl) — j=left, k=down, l=up, ;=right
-- **Move windows**: Alt-Shift + jkl;
+- **Navigation**: `hjkl` (vim-style) — h=left, j=down, k=up, l=right
+- **Move windows**: Alt-Shift + hjkl
 - **Workspaces**: Alt-1 through Alt-9, Alt-Shift-1..9 to move windows
 - **Fullscreen**: Alt-F
 - **Layout toggle**: Alt-/ (tiles), Alt-, (accordion)
