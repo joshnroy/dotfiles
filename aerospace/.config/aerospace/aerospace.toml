@@ -5,7 +5,8 @@ start-at-login = true
 
 # Launch JankyBorders on startup
 after-startup-command = [
-    'exec-and-forget borders active_color=0xffcba6f7 inactive_color=0xff313244 width=8.0 style=round'
+    'exec-and-forget borders active_color=0xffcba6f7 inactive_color=0xff313244 width=8.0 style=round',
+    'exec-and-forget open -a SwipeAeroSpace'
 ]
 
 # Normalization settings

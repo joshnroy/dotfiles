@@ -1,4 +1,5 @@
 tap "FelixKratz/formulae"
+tap "mediosz/tap"
 tap "nikitabobko/tap"
 
 brew "stow"
