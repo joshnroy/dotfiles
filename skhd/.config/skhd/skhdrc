@@ -1,0 +1,42 @@
+# skhd config — Option (alt) is the modifier.
+# All bindings work WITHOUT the yabai scripting addition (SIP enabled).
+
+# ── focus windows (vim-style) ─────────────────────────────────────────────────
+alt - h : yabai -m window --focus west
+alt - j : yabai -m window --focus south
+alt - k : yabai -m window --focus north
+alt - l : yabai -m window --focus east
+
+# ── move/swap window in bsp tree ──────────────────────────────────────────────
+alt + shift - h : yabai -m window --swap west  || yabai -m window --warp west
+alt + shift - j : yabai -m window --swap south || yabai -m window --warp south
+alt + shift - k : yabai -m window --swap north || yabai -m window --warp north
+alt + shift - l : yabai -m window --swap east  || yabai -m window --warp east
+
+# ── focus monitors / displays ─────────────────────────────────────────────────
+alt - 1 : yabai -m display --focus 1
+alt - 2 : yabai -m display --focus 2
+alt - 3 : yabai -m display --focus 3
+alt - n : yabai -m display --focus next || yabai -m display --focus first
+alt - p : yabai -m display --focus prev || yabai -m display --focus last
+
+# ── send focused window to another display (then follow it) ───────────────────
+alt + shift - 1 : yabai -m window --display 1 && yabai -m display --focus 1
+alt + shift - 2 : yabai -m window --display 2 && yabai -m display --focus 2
+alt + shift - 3 : yabai -m window --display 3 && yabai -m display --focus 3
+alt + shift - n : yabai -m window --display next || yabai -m window --display first
+alt + shift - p : yabai -m window --display prev || yabai -m window --display last
+
+# ── toggle split orientation of current window's parent node ──────────────────
+alt - e : yabai -m window --toggle split
+
+# ── toggle fullscreen / float ─────────────────────────────────────────────────
+alt - f         : yabai -m window --toggle zoom-fullscreen
+alt + shift - f : yabai -m window --toggle float --grid 6:6:1:1:4:4
+
+# ── balance / rotate (handy bsp extras) ───────────────────────────────────────
+alt - r : yabai -m space --rotate 90
+alt - b : yabai -m space --balance
+
+# ── restart yabai ─────────────────────────────────────────────────────────────
+alt + shift - r : yabai --restart-service

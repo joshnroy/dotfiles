@@ -1,10 +1,13 @@
 tap "FelixKratz/formulae"
 tap "mediosz/tap"
 tap "nikitabobko/tap"
+tap "koekeishiya/formulae"
 
 brew "stow"
 brew "starship"
 brew "borders"
+brew "koekeishiya/formulae/yabai"
+brew "koekeishiya/formulae/skhd"
 
 cask "ghostty"
 cask "kitty"
