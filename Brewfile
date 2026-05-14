@@ -6,6 +6,7 @@ tap "koekeishiya/formulae"
 brew "stow"
 brew "starship"
 brew "borders"
+brew "zellij"
 brew "koekeishiya/formulae/yabai"
 brew "koekeishiya/formulae/skhd"
 
