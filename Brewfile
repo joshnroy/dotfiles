@@ -1,6 +1,5 @@
 tap "FelixKratz/formulae"
 tap "mediosz/tap"
-tap "nikitabobko/tap"
 tap "koekeishiya/formulae"
 
 brew "stow"
@@ -11,6 +10,4 @@ brew "koekeishiya/formulae/yabai"
 brew "koekeishiya/formulae/skhd"
 
 cask "ghostty"
-cask "kitty"
-cask "aerospace"
 cask "font-jetbrains-mono-nerd-font"

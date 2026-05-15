@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Overview
 
-macOS dotfiles repository for an M4 Pro MacBook Pro. Manages configurations for: Kitty (primary terminal), Ghostty (backup terminal), AeroSpace (tiling WM), JankyBorders (window borders), Neovim (LazyVim), Zsh (Oh My Zsh + Starship prompt), and Starship. All apps use the **Catppuccin Mocha** theme and **JetBrainsMono Nerd Font**.
+macOS dotfiles repository for an M4 Pro MacBook Pro. Manages configurations for: Ghostty (terminal), Zellij (terminal multiplexer), yabai + skhd (tiling WM + hotkey daemon), JankyBorders (window borders), Neovim (LazyVim), Zsh (Oh My Zsh + Starship prompt), and Starship. All apps use the **Catppuccin Mocha** theme and **JetBrainsMono Nerd Font**.
 
 ## Setup Commands
 
@@ -13,14 +13,10 @@ macOS dotfiles repository for an M4 Pro MacBook Pro. Manages configurations for:
 brew bundle --file=Brewfile
 
 # Link a stow package (run from ~/dotfiles)
-stow <package>        # e.g., stow kitty, stow aerospace, stow zsh
+stow <package>        # e.g., stow ghostty, stow yabai, stow zsh
 
 # Unlink a stow package
 stow -D <package>
-
-# Reload configs after changes
-aerospace reload-config              # AeroSpace
-# Kitty: press Ctrl-Shift-F5 in the terminal window
 ```
 
 ## Symlink Management
@@ -29,45 +25,24 @@ All symlinks are managed via **GNU Stow**. Each top-level directory is a stow pa
 
 - `~/.zshrc` → `dotfiles/zsh/.zshrc`
 - `~/.config/nvim` → `dotfiles/nvim/.config/nvim`
-- `~/.config/aerospace` → `dotfiles/aerospace/.config/aerospace`
+- `~/.config/yabai` → `dotfiles/yabai/.config/yabai`
+- `~/.config/skhd` → `dotfiles/skhd/.config/skhd`
 - `~/.config/ghostty` → `dotfiles/ghostty/.config/ghostty`
-- `~/.config/kitty` → `dotfiles/kitty/.config/kitty`
+- `~/.config/zellij` → `dotfiles/zellij/.config/zellij`
 - `~/.config/starship.toml` → `dotfiles/starship/.config/starship.toml`
 
 ## Repository Structure
 
 ```
 Brewfile                           # Homebrew taps, formulae, casks
-aerospace/.config/aerospace/       # AeroSpace tiling WM config
-ghostty/.config/ghostty/           # Ghostty terminal (backup — has tab bug with AeroSpace)
-kitty/.config/kitty/               # Kitty terminal (primary) + current-theme.conf
+ghostty/.config/ghostty/           # Ghostty terminal config
 nvim/.config/nvim/                 # LazyVim-based Neovim config
+skhd/.config/skhd/                 # skhd hotkey daemon config
 starship/.config/starship.toml     # Starship prompt config
+yabai/.config/yabai/               # yabai tiling WM config
+zellij/.config/zellij/             # Zellij terminal multiplexer config
 zsh/.zshrc                         # Zsh with Oh My Zsh, aliases, conda, Starship init
 ```
-
-## AeroSpace (Tiling WM)
-
-- **Modifier key**: Alt (Option)
-- **Navigation**: `hjkl` (vim-style) — h=left, j=down, k=up, l=right
-- **Move windows**: Alt-Shift + hjkl
-- **Workspaces**: Alt-1 through Alt-9, Alt-Shift-1..9 to move windows
-- **Fullscreen**: Alt-F
-- **Layout toggle**: Alt-/ (tiles), Alt-, (accordion)
-- **Resize**: Alt-- (shrink), Alt-= (grow)
-- **Service mode**: Alt-Shift-' to enter, Esc to reload config and exit, F to toggle floating
-- **JankyBorders**: Launched automatically via `after-startup-command`. Active border is Catppuccin mauve (#cba6f7), inactive is surface0 (#313244), 8px width, round style.
-
-## Kitty (Primary Terminal)
-
-Kitty is preferred over Ghostty because its custom tab system works correctly with AeroSpace (Ghostty uses native macOS tabs which AeroSpace treats as separate windows).
-
-- **New tab (cwd)**: Cmd-T
-- **New window (cwd)**: Cmd-N
-- **Switch tabs**: Cmd-1 through Cmd-9
-- **Reload config**: Ctrl-Shift-F5
-- **Tab bar**: Powerline style, top edge
-- **Option as Alt**: Enabled (required for AeroSpace keybinds inside Kitty)
 
 ## Neovim Configuration
 
